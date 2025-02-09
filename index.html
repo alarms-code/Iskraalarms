@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa de Alarmes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        input {
+            padding: 12px;
+			width: 300px;
+			font-size: 18px;
+			border-radius: 5px; /* Arredonda as bordas */
+			border: 1px solid #ccc; /* Adiciona uma borda leve */
+			outline: none; /* Remove a borda azul ao clicar */
+			text-align: center;
+		}
+		fixed-size {        
+			height: 10px;
+			vertical-align: middle;
+			border-top: 2px solid black;
+            border-bottom: 2px solid black;
+			color: red;
+		}
+	   button {
+            padding: 10px;
+            font-size: 16px;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        th, td {
+            height: 10px;
+			padding: 15px;
+            border-left: 2px solid black;
+            border-right: 2px solid black;
+        }
+        .borda-superior-inferior {
+            border-top: 2px solid black;
+            border-bottom: 2px solid black;
+			center;
+		}
+		 .borda-caixa {
+			height: 10px;
+			border-top: 2px solid black;
+            border-bottom: 2px solid black;
+			color: red;
+			center;
+		}
+        .borda-inferior {
+            border-bottom: 2px solid black;
+        }
+		.borda-inferiorred {
+			color: red;
+            border-bottom: 2px solid black;
+        }
+		.borda-superior {
+            border-top: 2px solid black;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+
+    <table>
+        <tr>
+            <td class="borda-superior" colspan="2">
+                <img src="imagens/logo.jpg" alt="Iskraemeco Logo"> </td>
+        </tr>
+        
+		<tr>
+            <td colspan="2"><strong>ESCREVA EM BAIXO O ALARME ENCONTRADO</strong></td>
+        </tr>
+        
+		<tr>
+            <td> <input type="text" id="searchInput" placeholder="Digite o código, nome ou tipo...">
+				 <div id="result"></div> </td>
+        </tr>
+        
+		<tr>
+		<td colspan="2"><strong>Nome do Alarme:</strong> </td>
+		</tr>
+		
+		<tr>
+            <td id="nameCell" class="error" colspan="2">  </td> <!-- 5ª linha -->
+        </tr>
+        
+		<tr>
+            <td colspan="2"><strong>Possible Problem</strong></td>
+        </tr>
+        
+		<tr>
+            <td id="descriptionCell" class="borda-inferiorred" colspan="2"></td> <!-- Última linha -->
+        </tr>
+    </table>
+
+    <script>
+        let alarmData = [];
+
+        // Carregar o ficheiro JSON
+        fetch("alarms.json")
+            .then(response => response.json())
+            .then(data => { 
+                alarmData = data;
+            })
+            .catch(error => console.error("Erro ao carregar o JSON:", error));
+
+		document.getElementById("searchInput").addEventListener("keypress", function(event) {
+			if (event.key === "Enter") {  // Verifica se a tecla pressionada é "Enter"
+			event.preventDefault();  // Impede o envio do formulário (caso haja um)
+			searchAlarm();  // Chama a função de pesquisa
+			}
+		});
+
+
+
+
+
+
+        function searchAlarm() {
+            let searchTerm = document.getElementById("searchInput").value.toLowerCase();
+            let nameCell = document.getElementById("nameCell"); // 5ª linha da tabela
+            let descriptionCell = document.getElementById("descriptionCell"); // Última linha da tabela
+
+            nameCell.innerHTML = "<strong>Nome do Alarme:</strong> "; // Limpar antes da pesquisa
+            descriptionCell.innerHTML = ""; // Limpar antes da pesquisa
+
+            let matches = alarmData.filter(alarm => 
+                Object.values(alarm).some(value => 
+                    value.toString().toLowerCase().includes(searchTerm)
+                )
+            );
+
+            if (matches.length > 0) {
+                // Inserir Nome e Descrição do primeiro resultado encontrado
+                nameCell.innerHTML = `${matches[0]["Nome"]}`;
+                descriptionCell.innerHTML = `${matches[0]["Descrição"]}`;
+            } else {
+                nameCell.innerHTML = "<span style='color: red;'>Nenhum resultado encontrado.</span>";
+                descriptionCell.innerHTML = "<span style='color: red;'>Nenhum resultado encontrado.</span>";
+            }
+        }
+    </script>
+
+</body>
+</html>

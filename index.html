@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pesquisa de Alarmes</title>
-    <style>
+   <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
@@ -19,18 +19,61 @@
 			outline: none; /* Remove a borda azul ao clicar */
 			text-align: center;
 		}
-	borda-inferiorred {
+		fixed-size {        
+			height: 10px;
+			vertical-align: middle;
+			border-top: 2px solid black;
+            border-bottom: 2px solid black;
+			color: red;
+		}
+	   button {
+            padding: 10px;
+            font-size: 16px;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        th, td {
+            height: 10px;
+			padding: 15px;
+            border-left: 2px solid black;
+            border-right: 2px solid black;
+        }
+        .borda-superior-inferior {
+            border-top: 2px solid black;
+            border-bottom: 2px solid black;
+			center;
+		}
+		 .borda-caixa {
+			height: 10px;
+			border-top: 2px solid black;
+            border-bottom: 2px solid black;
+			color: red;
+			center;
+		}
+        .borda-inferior {
+            border-bottom: 2px solid black;
+        }
+		.borda-inferiorred {
 			color: red;
             border-bottom: 2px solid black;
         }
-		borda-superior {
+		.borda-superior {
             border-top: 2px solid black;
         }
-        error {
+        .error {
             color: red;
         }
-
-
     </style>
 </head>
 <body>

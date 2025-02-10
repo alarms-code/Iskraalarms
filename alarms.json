@@ -1,4 +1,12 @@
 [
+  {
+        "Código": "IE0001",
+        "Nome": "Boot notification",
+        "Tipo": "Informative",
+        "Descrição": "Verify if the door is properly closed or the door contact"
+    }
+    
+    
     {
         "Código": "IE0001",
         "Nome": "Boot notification",

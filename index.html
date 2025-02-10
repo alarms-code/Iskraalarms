@@ -78,7 +78,7 @@
     </table>
 
     <script>
-     let alarmData = [];
+    let alarmData = [];
 
 // Carregar os dados dos alarmes
 fetch("alarms.json")
@@ -97,8 +97,8 @@ document.getElementById("searchInput").addEventListener("input", function() {
 
 // Limpar os resultados
 function clearResults() {
-    document.getElementById("nameCell").innerHTML = "";
-    document.getElementById("descriptionCell").innerHTML = "";
+    document.getElementById("nameCell").textContent = "";
+    document.getElementById("descriptionCell").textContent = "";
 }
 
 // Função de pesquisa de alarmes
@@ -111,25 +111,31 @@ document.getElementById("searchInput").addEventListener("keypress", function(eve
 
 // Função de busca no banco de dados de alarmes
 function searchAlarm() {
+    // Verifica se os dados já foram carregados
+    if (alarmData.length === 0) {
+        console.error("Os dados dos alarmes ainda não foram carregados.");
+        return;
+    }
+
     let searchTerm = document.getElementById("searchInput").value.toLowerCase();
     let nameCell = document.getElementById("nameCell");
     let descriptionCell = document.getElementById("descriptionCell");
 
     // Resetar os resultados
-    nameCell.innerHTML = "";
-    descriptionCell.innerHTML = "";
+    nameCell.textContent = "";
+    descriptionCell.textContent = "";
 
     // Filtrar os dados dos alarmes
     let matches = alarmData.filter(alarm => 
         Object.values(alarm).some(value => 
-            value.toString().toLowerCase().includes(searchTerm)
+            value && value.toString().toLowerCase().includes(searchTerm)
         )
     );
 
     // Exibir os resultados
     if (matches.length > 0) {
-        nameCell.innerHTML = `${matches[0]["Nome"]}`;
-        descriptionCell.innerHTML = `${matches[0]["Descrição"]}`;
+        nameCell.textContent = matches[0]["Nome"];
+        descriptionCell.textContent = matches[0]["Descrição"];
     } else {
         nameCell.innerHTML = "<span style='color: red;'>Nenhum resultado encontrado.</span>";
         descriptionCell.innerHTML = "<span style='color: red;'>Nenhum resultado encontrado.</span>";

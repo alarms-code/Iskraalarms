@@ -38,18 +38,9 @@
         }
         th, td {
             padding: 15px;
-            border-left: 2px solid red;
-            border-right: 2px solid red;
-        }
-        .borda-superior {
-            border-top: 2px solid red;
-        }
-        .borda-inferior {
-            border-bottom: 2px solid red;
         }
         .borda-inferiorred {
             color: red;
-            border-bottom: 2px solid red;
         }
         .error {
             color: red;
@@ -59,7 +50,7 @@
 <body>
     <table>
         <tr>
-            <td class="borda-superior" colspan="2">
+            <td colspan="2">
                 <img src="imagens/logo.png" alt="Iskraemeco Logo">
             </td>
         </tr>
@@ -103,7 +94,7 @@ document.getElementById("searchInput").addEventListener("input", function() {
 
     timeout = setTimeout(function() {
         searchAlarm();
-    }, 300);  // 300ms debounce time
+    }, 5000);  // 300ms debounce time
 });
 
 document.getElementById("searchInput").addEventListener("keypress", function(event) {

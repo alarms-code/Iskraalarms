@@ -78,7 +78,7 @@
     </table>
 
     <script>
-    let alarmData = [];
+  let alarmData = [];
 
 // Carregar os dados dos alarmes
 fetch("alarms.json")
@@ -89,10 +89,14 @@ fetch("alarms.json")
     .catch(error => console.error("Erro ao carregar o JSON:", error));
 
 document.getElementById("searchInput").addEventListener("input", function() {
-    // Limpar os resultados quando o campo de entrada estiver vazio
+    // Limpar os resultados sempre que o usuário digitar um caractere
+    clearResults();
+    
+    // Se o campo de entrada estiver vazio, não faça mais nada
     if (this.value === "") {
-        clearResults();
+        return;
     }
+    searchAlarm();
 });
 
 // Limpar os resultados

@@ -1,0 +1,403 @@
+[
+    {
+        "Código": "IE0001",
+        "Nome": "Boot notification",
+        "Descrição": "Informative"
+    },
+    {
+        "Código": "IE0010",
+        "Nome": "DIAG_UPLOADING",
+        "Descrição": "Informative"
+    },
+    {
+        "Código": "IE0011",
+        "Nome": "DIAG_DONE",
+        "Descrição": "Informative"
+    },
+    {
+        "Código": "IE0012",
+        "Nome": "DIAG_FAILED",
+        "Descrição": "Informative"
+    },
+    {
+        "Código": "IE0020",
+        "Nome": "FWM_Installed",
+        "Descrição": "Informative"
+    },
+    {
+        "Código": "IE0021",
+        "Nome": "FWM_InstallationFailed",
+        "Descrição": "Informative"
+    },
+    {
+        "Código": "IE0022",
+        "Nome": "FWM_DownloadingFailed",
+        "Descrição": "Informative"
+    },
+    {
+        "Código": "IE0023",
+        "Nome": "FWM_Downloading",
+        "Descrição": "Informative"
+    },
+    {
+        "Código": "IE0024",
+        "Nome": "FWM_Installing",
+        "Descrição": "Informative"
+    },
+    {
+        "Código": "IE0025",
+        "Nome": "FWM_Downloaded",
+        "Descrição": "Informative"
+    },
+   
+  
+    {
+        "Código": "IE0050",
+        "Nome": "OPENDOOR",
+        "Descrição": "Verify if the door its properly closed or the door contact"
+    },
+    {
+        "Código": "IE0051",
+        "Nome": "RFIDFAILURE",
+        "Descrição": NaN
+    },
+   
+   
+    {
+        "Código": "IE0101",
+        "Nome": "C1 Emergency Button",
+        "Descrição": "Verify if the emergency button is not pushed or check the contacts on the button."
+    },
+    {
+        "Código": "IE0102",
+        "Nome": "C1 Meter Failure",
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE0103",
+        "Nome": "C1 Derate Cause:PT1000",
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE0104",
+        "Nome": "C1 Derate Cause:Cable Temp",
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE0105",
+        "Nome": "C1 IMD Failure",
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE0106",
+        "Nome": "C1 DC Sensor Failure",
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE0107",
+        "Nome": "C1 PE failure",
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE0108",
+        "Nome": "C1 PE inop",
+        "Descrição": NaN
+    },
+  
+  
+    {
+        "Código": "IE0201",
+        "Nome": "C2 Emergency Button",
+        "Descrição": "Verify if the emergency button is not pushed or check the contacts on the button."
+    },
+    {
+        "Código": "IE0202",
+        "Nome": "C2 Meter Failure",
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE0203",
+        "Nome": "C2 Derate Cause:PT1000",
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE0204",
+        "Nome": "C2 Derate Cause:Cable Temp",
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE0205",
+        "Nome": "C2 IMD Failure",
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE0206",
+        "Nome": "C2 DC Sensor Failure",
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE0207",
+        "Nome": "C2 PE failure",
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE0208",
+        "Nome": "C2 PE inop",
+        "Descrição": NaN
+    },
+    {
+        "Código": NaN,
+        "Nome": NaN,
+        "Descrição": NaN
+    },
+    {
+        "Código": "// pu alarms  vsecc/pu/alarm",
+        "Nome": NaN,
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE10001",
+        "Nome": "PU Overheat alarm ",
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE10002",
+        "Nome": "PU AC Input Overvoltage",
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE10003",
+        "Nome": "PU AC Input undervotlage",
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE10004",
+        "Nome": "PU AC Meter Comm Failure",
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE10005",
+        "Nome": "PU System Temp Failure",
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE10006",
+        "Nome": "PU Charging Module Comm Failure",
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE10007",
+        "Nome": "PU Open door",
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE10008",
+        "Nome": "PU Output shortcircuit",
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE10009",
+        "Nome": "PU Paralel Contact Fail",
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE10010",
+        "Nome": "PU Emergency stop ",
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE10011",
+        "Nome": "PU SPD Alarm",
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE10012",
+        "Nome": "PU Dust Filter acumulation Alarm",
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE10013",
+        "Nome": "PU OTA Updating",
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE10014",
+        "Nome": "PU Aux Board Fail",
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE10020",
+        "Nome": "PU no comm",
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE10021",
+        "Nome": "PU comm ok ",
+        "Descrição": NaN
+    },
+    {
+        "Código": NaN,
+        "Nome": NaN,
+        "Descrição": NaN
+    },
+    {
+        "Código": "// CHARGING OR NOT",
+        "Nome": NaN,
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE10030",
+        "Nome": "PU not charging",
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE10031",
+        "Nome": "PU charging",
+        "Descrição": NaN
+    },
+    {
+        "Código": NaN,
+        "Nome": NaN,
+        "Descrição": NaN
+    },
+    {
+        "Código": " // power reductyion power  vsecc/pu/reasonReducePwr",
+        "Nome": NaN,
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE10032",
+        "Nome": "PU Reduce Pwr: AC low voltage",
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE10033",
+        "Nome": "PU Reduce Pwr: Overheating >55C",
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE10034",
+        "Nome": "PU Reduce Pwr: low noise level",
+        "Descrição": NaN
+    },
+    {
+        "Código": NaN,
+        "Nome": NaN,
+        "Descrição": NaN
+    },
+    {
+        "Código": " // dc bus fail  vsecc/pu/dcBusStatus ",
+        "Nome": NaN,
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE10035",
+        "Nome": "fail due paralel contactors",
+        "Descrição": NaN
+    },
+    {
+        "Código": NaN,
+        "Nome": NaN,
+        "Descrição": NaN
+    },
+    {
+        "Código": "// modules",
+        "Nome": NaN,
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE10050",
+        "Nome": "Module Alarm: Grid power fail",
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE10051",
+        "Nome": "Module Alarm: Bus bar fail",
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE10052",
+        "Nome": "Module Alarm: Overhear",
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE10053",
+        "Nome": "Module Alarm: FAN fault",
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE10054",
+        "Nome": "Module Alarm: Aux Source Fault",
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE10055",
+        "Nome": "Module Alarm: SCI Fault",
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE10056",
+        "Nome": "Module Alarm: Output over voltage",
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE10057",
+        "Nome": "Module Alarm: short circuit",
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE10058",
+        "Nome": "Module Alarm: Output overcurrent",
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE10059",
+        "Nome": "Module Alarm: PFC fault",
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE10060",
+        "Nome": "Module Alarm: DCDC fault",
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE10061",
+        "Nome": "Module Alarm: power limit ",
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE10062",
+        "Nome": "Module Alarm: current equalization",
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE10063",
+        "Nome": "Module Alarm: CAN address conflit",
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE10064",
+        "Nome": "Module Alarm: Incumbent fault",
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE10065",
+        "Nome": "Module Alarm: Discharge Alarm",
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE10070",
+        "Nome": "Module Alarm: Comm Fail",
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE10071",
+        "Nome": "Module Alarm: Comm Normal",
+        "Descrição": NaN
+    },
+    {
+        "Código": "IE99999",
+        "Nome": "    LAST (\"IE99999\", \"IE99999 \")",
+        "Descrição": NaN
+    }
+]

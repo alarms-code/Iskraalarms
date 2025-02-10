@@ -78,9 +78,9 @@
     </table>
 
     <script>
-      let alarmData = [];
+     let alarmData = [];
 
-// Fetch the alarm data
+// Carregar os dados dos alarmes
 fetch("alarms.json")
     .then(response => response.json())
     .then(data => { 
@@ -88,15 +88,20 @@ fetch("alarms.json")
     })
     .catch(error => console.error("Erro ao carregar o JSON:", error));
 
-let timeout;
 document.getElementById("searchInput").addEventListener("input", function() {
-    if (timeout) clearTimeout(timeout);
-
-    timeout = setTimeout(function() {
-        searchAlarm();
-    }, 5000);  // 300ms debounce time
+    // Limpar os resultados quando o campo de entrada estiver vazio
+    if (this.value === "") {
+        clearResults();
+    }
 });
 
+// Limpar os resultados
+function clearResults() {
+    document.getElementById("nameCell").innerHTML = "";
+    document.getElementById("descriptionCell").innerHTML = "";
+}
+
+// Função de pesquisa de alarmes
 document.getElementById("searchInput").addEventListener("keypress", function(event) {
     if (event.key === "Enter") {
         event.preventDefault();
@@ -104,23 +109,24 @@ document.getElementById("searchInput").addEventListener("keypress", function(eve
     }
 });
 
-// Search function to find matching alarms
+// Função de busca no banco de dados de alarmes
 function searchAlarm() {
     let searchTerm = document.getElementById("searchInput").value.toLowerCase();
     let nameCell = document.getElementById("nameCell");
     let descriptionCell = document.getElementById("descriptionCell");
 
-    // Reset the results area
+    // Resetar os resultados
     nameCell.innerHTML = "<strong>Nome do Alarme:</strong> ";
     descriptionCell.innerHTML = "";
 
-    // Filter the alarm data
+    // Filtrar os dados dos alarmes
     let matches = alarmData.filter(alarm => 
         Object.values(alarm).some(value => 
             value.toString().toLowerCase().includes(searchTerm)
         )
     );
 
+    // Exibir os resultados
     if (matches.length > 0) {
         nameCell.innerHTML = `${matches[0]["Nome"]}`;
         descriptionCell.innerHTML = `${matches[0]["Descrição"]}`;
@@ -129,13 +135,5 @@ function searchAlarm() {
         descriptionCell.innerHTML = "<span style='color: red;'>Nenhum resultado encontrado.</span>";
     }
 }
-
-// Function to clear the results
-function clearResults() {
-    document.getElementById("nameCell").innerHTML = "";
-    document.getElementById("descriptionCell").innerHTML = "";
-}
-
-    </script>
 </body>
 </html>

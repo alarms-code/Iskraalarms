@@ -78,7 +78,7 @@
     </table>
 
     <script>
- let alarmData = [];
+let alarmData = [];
 
 // Carregar os dados dos alarmes
 fetch("alarms.json")
@@ -88,28 +88,34 @@ fetch("alarms.json")
     })
     .catch(error => console.error("Erro ao carregar o JSON:", error));
 
+const searchInput = document.getElementById("searchInput");
+const nameCell = document.getElementById("nameCell");
+const descriptionCell = document.getElementById("descriptionCell");
+
 // Adicionar evento para capturar a tecla Enter e iniciar a pesquisa
-document.getElementById("searchInput").addEventListener("keypress", function(event) {
+searchInput.addEventListener("keypress", function(event) {
     if (event.key === "Enter") {
         event.preventDefault();
         searchAlarm();
     }
 });
 
+// Adicionar evento para limpar os resultados quando o usuário apaga o texto
+searchInput.addEventListener("input", function() {
+    if (searchInput.value.trim() === "") {
+        clearResults();
+    }
+});
+
 // Função de pesquisa
 function searchAlarm() {
-    let searchTerm = document.getElementById("searchInput").value.toLowerCase();
-    let nameCell = document.getElementById("nameCell");
-    let descriptionCell = document.getElementById("descriptionCell");
+    let searchTerm = searchInput.value.toLowerCase().trim();
 
     // Limpar os campos antes de pesquisar
-    nameCell.textContent = "";
-    descriptionCell.textContent = "";
+    clearResults();
 
     // Se o campo de pesquisa estiver vazio, não mostrar nada
-    if (searchTerm.trim() === "") {
-        return;
-    }
+    if (searchTerm === "") return;
 
     // Verificar se os dados foram carregados
     if (alarmData.length === 0) {
@@ -132,6 +138,12 @@ function searchAlarm() {
         nameCell.innerHTML = "<span style='color: red;'>Nenhum resultado encontrado.</span>";
         descriptionCell.innerHTML = "<span style='color: red;'>Nenhum resultado encontrado.</span>";
     }
+}
+
+// Função para limpar os resultados
+function clearResults() {
+    nameCell.textContent = "";
+    descriptionCell.textContent = "";
 }
     </script>
     </body>

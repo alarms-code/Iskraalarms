@@ -113,7 +113,7 @@ searchInput.addEventListener("input", function() {
     }
 });
 
-// Função de pesquisa
+// Função de pesquisa (agora busca apenas pelo código)
 function searchAlarm() {
     let searchTerm = searchInput.value.toLowerCase().trim();
 
@@ -129,11 +129,9 @@ function searchAlarm() {
         return;
     }
 
-    // Filtrar os alarmes com base no termo pesquisado
+    // Filtrar os alarmes com base no código
     let matches = alarmData.filter(alarm => 
-        Object.values(alarm).some(value => 
-            value && value.toString().toLowerCase().includes(searchTerm)
-        )
+        alarm["Código"] && alarm["Código"].toLowerCase().includes(searchTerm)
     );
 
     // Exibir o resultado

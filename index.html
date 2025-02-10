@@ -78,7 +78,7 @@
     </table>
 
     <script>
-  let alarmData = [];
+ let alarmData = [];
 
 // Carregar os dados dos alarmes
 fetch("alarms.json")
@@ -88,6 +88,7 @@ fetch("alarms.json")
     })
     .catch(error => console.error("Erro ao carregar o JSON:", error));
 
+// Adicionar evento para capturar a tecla Enter e iniciar a pesquisa
 document.getElementById("searchInput").addEventListener("keypress", function(event) {
     if (event.key === "Enter") {
         event.preventDefault();
@@ -95,47 +96,38 @@ document.getElementById("searchInput").addEventListener("keypress", function(eve
     }
 });
 
-// Limpar os resultados
-function clearResults() {
-    document.getElementById("nameCell").textContent = "";
-    document.getElementById("descriptionCell").textContent = "";
-}
-
-// Função de pesquisa de alarmes
-document.getElementById("searchInput").addEventListener("keypress", function(event) {
-    if (event.key === "Enter") {
-        event.preventDefault();
-        searchAlarm();
-    }
-});
-
-// Função de busca no banco de dados de alarmes
+// Função de pesquisa
 function searchAlarm() {
-    // Verifica se os dados já foram carregados
+    let searchTerm = document.getElementById("searchInput").value.toLowerCase();
+    let nameCell = document.getElementById("nameCell");
+    let descriptionCell = document.getElementById("descriptionCell");
+
+    // Limpar os campos antes de pesquisar
+    nameCell.textContent = "";
+    descriptionCell.textContent = "";
+
+    // Se o campo de pesquisa estiver vazio, não mostrar nada
+    if (searchTerm.trim() === "") {
+        return;
+    }
+
+    // Verificar se os dados foram carregados
     if (alarmData.length === 0) {
         console.error("Os dados dos alarmes ainda não foram carregados.");
         return;
     }
 
-    let searchTerm = document.getElementById("searchInput").value.toLowerCase();
-    let nameCell = document.getElementById("nameCell");
-    let descriptionCell = document.getElementById("descriptionCell");
-
-    // Resetar os resultados
-    nameCell.textContent = "";
-    descriptionCell.textContent = "";
-
-    // Filtrar os dados dos alarmes
+    // Filtrar os alarmes com base no termo pesquisado
     let matches = alarmData.filter(alarm => 
         Object.values(alarm).some(value => 
             value && value.toString().toLowerCase().includes(searchTerm)
         )
     );
 
-    // Exibir os resultados
+    // Exibir o resultado
     if (matches.length > 0) {
-        nameCell.textContent = matches[0]["Nome"];
-        descriptionCell.textContent = matches[0]["Descrição"];
+        nameCell.textContent = matches[0]["Nome"] || "Sem nome disponível";
+        descriptionCell.textContent = matches[0]["Descrição"] || "Sem descrição disponível";
     } else {
         nameCell.innerHTML = "<span style='color: red;'>Nenhum resultado encontrado.</span>";
         descriptionCell.innerHTML = "<span style='color: red;'>Nenhum resultado encontrado.</span>";

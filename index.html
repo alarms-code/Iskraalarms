@@ -87,55 +87,64 @@
     </table>
 
     <script>
-        let alarmData = [];
+      let alarmData = [];
 
-        fetch("alarms.json")
-            .then(response => response.json())
-            .then(data => { 
-                alarmData = data;
-            })
-            .catch(error => console.error("Erro ao carregar o JSON:", error));
+// Fetch the alarm data
+fetch("alarms.json")
+    .then(response => response.json())
+    .then(data => { 
+        alarmData = data;
+    })
+    .catch(error => console.error("Erro ao carregar o JSON:", error));
 
-        document.getElementById("searchInput").addEventListener("keypress", function(event) {
-            if (event.key === "Enter") {
-                event.preventDefault();
-                searchAlarm();
-            }
-        });
+let timeout;
+document.getElementById("searchInput").addEventListener("input", function() {
+    if (timeout) clearTimeout(timeout);
 
-        document.getElementById("searchInput").addEventListener("input", function() {
-            if (this.value === "") {
-                clearResults();
-            }
-        });
+    timeout = setTimeout(function() {
+        searchAlarm();
+    }, 300);  // 300ms debounce time
+});
 
-        function searchAlarm() {
-            let searchTerm = document.getElementById("searchInput").value.toLowerCase();
-            let nameCell = document.getElementById("nameCell");
-            let descriptionCell = document.getElementById("descriptionCell");
+document.getElementById("searchInput").addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        searchAlarm();
+    }
+});
 
-            nameCell.innerHTML = "<strong>Nome do Alarme:</strong> ";
-            descriptionCell.innerHTML = "";
+// Search function to find matching alarms
+function searchAlarm() {
+    let searchTerm = document.getElementById("searchInput").value.toLowerCase();
+    let nameCell = document.getElementById("nameCell");
+    let descriptionCell = document.getElementById("descriptionCell");
 
-            let matches = alarmData.filter(alarm => 
-                Object.values(alarm).some(value => 
-                    value.toString().toLowerCase().includes(searchTerm)
-                )
-            );
+    // Reset the results area
+    nameCell.innerHTML = "<strong>Nome do Alarme:</strong> ";
+    descriptionCell.innerHTML = "";
 
-            if (matches.length > 0) {
-                nameCell.innerHTML = `${matches[0]["Nome"]}`;
-                descriptionCell.innerHTML = `${matches[0]["Descrição"]}`;
-            } else {
-                nameCell.innerHTML = "<span style='color: red;'>Nenhum resultado encontrado.</span>";
-                descriptionCell.innerHTML = "<span style='color: red;'>Nenhum resultado encontrado.</span>";
-            }
-        }
+    // Filter the alarm data
+    let matches = alarmData.filter(alarm => 
+        Object.values(alarm).some(value => 
+            value.toString().toLowerCase().includes(searchTerm)
+        )
+    );
 
-        function clearResults() {
-            document.getElementById("nameCell").innerHTML = "";
-            document.getElementById("descriptionCell").innerHTML = "";
-        }
+    if (matches.length > 0) {
+        nameCell.innerHTML = `${matches[0]["Nome"]}`;
+        descriptionCell.innerHTML = `${matches[0]["Descrição"]}`;
+    } else {
+        nameCell.innerHTML = "<span style='color: red;'>Nenhum resultado encontrado.</span>";
+        descriptionCell.innerHTML = "<span style='color: red;'>Nenhum resultado encontrado.</span>";
+    }
+}
+
+// Function to clear the results
+function clearResults() {
+    document.getElementById("nameCell").innerHTML = "";
+    document.getElementById("descriptionCell").innerHTML = "";
+}
+
     </script>
 </body>
 </html>

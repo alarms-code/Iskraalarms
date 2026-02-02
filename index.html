@@ -132,12 +132,12 @@ function searchAlarm() {
 
     // Filtrar os alarmes com base no código exato
     let matches = alarmData.filter(alarm => 
-        alarm["Código"] && alarm["Código"].toLowerCase() === searchTerm
+        alarm["CÓDIGO"] && alarm["CÓDIGO"].toLowerCase() === searchTerm
     );
 
     // Exibir o resultado
     if (matches.length > 0) {
-        nameCell.textContent = matches[0]["Nome"] || "Sem nome disponível";
+        nameCell.textContent = matches[0]["NOME"] || "Sem nome disponível";
         descriptionCell.textContent = matches[0]["Descrição"] || "Sem descrição disponível";
     } else {
         nameCell.innerHTML = "<span style='color: red;'>Nenhum resultado encontrado.</span>";
@@ -153,3 +153,4 @@ function clearResults() {
     </script>
     </body>
 </html>
+

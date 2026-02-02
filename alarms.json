@@ -1,352 +1,734 @@
 [
     {
-        "Código": "IE0001",
-        "Nome": "Boot notification",
-        "Descrição": "Informative"
+        "CÓDIGO": "IE0001",
+        "Severidade": 5,
+        "NOME": "SBC Boot;",
+        "DESCRIÇÃO": "The EVSE make a boot for a manual or automatic reason.It can be normal, but if persist evaluate the EVSE."
     },
     {
-        "Código": "IE0010",
-        "Nome": "DIAG_UPLOADING",
-        "Descrição": "Informative"
+        "CÓDIGO": "IE0002",
+        "Severidade": 1,
+        "NOME": "Conector free",
+        "DESCRIÇÃO": "Information"
     },
     {
-        "Código": "IE0011",
-        "Nome": "DIAG_DONE",
-        "Descrição": "Informative"
+        "CÓDIGO": "IE0010",
+        "Severidade": 1,
+        "NOME": "DIAG_UPLOADING",
+        "DESCRIÇÃO": "uploading diagnostics "
     },
     {
-        "Código": "IE0012",
-        "Nome": "DIAG_FAILED",
-        "Descrição": "Informative"
+        "CÓDIGO": "IE0011",
+        "Severidade": 1,
+        "NOME": "DIAG_DONE",
+        "DESCRIÇÃO": "uploading diagnostics done"
     },
     {
-        "Código": "IE0020",
-        "Nome": "FWM_Installed",
-        "Descrição": "Informative"
+        "CÓDIGO": "IE0012",
+        "Severidade": 1,
+        "NOME": "DIAG_FAILED",
+        "DESCRIÇÃO": "uploading diagnostics failed "
     },
     {
-        "Código": "IE0021",
-        "Nome": "FWM_InstallationFailed",
-        "Descrição": "Informative"
+        "CÓDIGO": "IE0013",
+        "Severidade": 1,
+        "NOME": "Max Soc",
+        "DESCRIÇÃO": "SOC of car is greater than max"
     },
     {
-        "Código": "IE0022",
-        "Nome": "FWM_DownloadingFailed",
-        "Descrição": "Informative"
+        "CÓDIGO": "IE0020",
+        "Severidade": 1,
+        "NOME": "FWM_Installed",
+        "DESCRIÇÃO": "firmware installed"
     },
     {
-        "Código": "IE0023",
-        "Nome": "FWM_Downloading",
-        "Descrição": "Informative"
+        "CÓDIGO": "IE0021",
+        "Severidade": 8,
+        "NOME": "FWM_InstallationFailed",
+        "DESCRIÇÃO": "firmware failed"
     },
     {
-        "Código": "IE0024",
-        "Nome": "FWM_Installing",
-        "Descrição": "Informative"
+        "CÓDIGO": "IE0022",
+        "Severidade": 8,
+        "NOME": "FWM_DownloadingFailed",
+        "DESCRIÇÃO": "firmware download failed"
     },
     {
-        "Código": "IE0025",
-        "Nome": "FWM_Downloaded",
-        "Descrição": "Informative"
+        "CÓDIGO": "IE0023",
+        "Severidade": 1,
+        "NOME": "FWM_Downloading",
+        "DESCRIÇÃO": "firmware downloading"
     },
     {
-        "Código": "IE0050",
-        "Nome": "OPENDOOR",
-        "Descrição": "Verify if the door is properly closed or check the door contact"
+        "CÓDIGO": "IE0024",
+        "Severidade": 1,
+        "NOME": "FWM_Installing",
+        "DESCRIÇÃO": "firmware installing"
     },
     {
-        "Código": "IE0051",
-        "Nome": "RFIDFAILURE",
-        "Descrição": null
+        "CÓDIGO": "IE0025",
+        "Severidade": 1,
+        "NOME": "FWM_Downloaded",
+        "DESCRIÇÃO": "firmware downloaded"
     },
     {
-        "Código": "IE0101",
-        "Nome": "C1 Emergency Button",
-        "Descrição": "Verify if the emergency button is not pushed or check the contacts on the button."
+        "CÓDIGO": "",
+        "Severidade": "",
+        "NOME": "",
+        "DESCRIÇÃO": ""
     },
     {
-        "Código": "IE0102",
-        "Nome": "C1 Meter Failure",
-        "Descrição": null
+        "CÓDIGO": " // GENERAL",
+        "Severidade": "",
+        "NOME": "",
+        "DESCRIÇÃO": ""
     },
     {
-        "Código": "IE0103",
-        "Nome": "C1 Derate Cause:PT1000",
-        "Descrição": null
+        "CÓDIGO": "IE0050",
+        "Severidade": 10,
+        "NOME": "Open Door",
+        "DESCRIÇÃO": "Door open, or is maintenance or security failure"
     },
     {
-        "Código": "IE0104",
-        "Nome": "C1 Derate Cause:Cable Temp",
-        "Descrição": null
+        "CÓDIGO": "IE0051",
+        "Severidade": 10,
+        "NOME": "RFID Failure",
+        "DESCRIÇÃO": "RFID module has comunication failed, if persists possible HW failure."
     },
     {
-        "Código": "IE0105",
-        "Nome": "C1 IMD Failure",
-        "Descrição": null
+        "CÓDIGO": "IE0054",
+        "Severidade": 10,
+        "NOME": "SECC Fail",
+        "DESCRIÇÃO": "Comm failure with SECC, if permanent is critical"
     },
     {
-        "Código": "IE0106",
-        "Nome": "C1 DC Sensor Failure",
-        "Descrição": null
+        "CÓDIGO": "IE0055",
+        "Severidade": 1,
+        "NOME": "SECC Recover",
+        "DESCRIÇÃO": "Comm recover with SECC"
     },
     {
-        "Código": "IE0107",
-        "Nome": "C1 PE failure",
-        "Descrição": null
+        "CÓDIGO": "IE0056",
+        "Severidade": 10,
+        "NOME": "PWM Fail",
+        "DESCRIÇÃO": "Comm PWM Fail , if permanent is critical"
     },
     {
-        "Código": "IE0108",
-        "Nome": "C1 PE inop",
-        "Descrição": null
+        "CÓDIGO": "IE0058",
+        "Severidade": 1,
+        "NOME": "PU Fail",
+        "DESCRIÇÃO": "Comm PU Fail , critical"
     },
     {
-        "Código": "IE0201",
-        "Nome": "C2 Emergency Button",
-        "Descrição": "Verify if the emergency button is not pushed or check the contacts on the button."
+        "CÓDIGO": "IE0059",
+        "Severidade": 1,
+        "NOME": "RFID Recover",
+        "DESCRIÇÃO": "RFID module has comunication Recover"
     },
     {
-        "Código": "IE0202",
-        "Nome": "C2 Meter Failure",
-        "Descrição": null
+        "CÓDIGO": "IE0060",
+        "Severidade": 10,
+        "NOME": "SPD Fail",
+        "DESCRIÇÃO": "SPD failure, need to be checked on site"
     },
     {
-        "Código": "IE0203",
-        "Nome": "C2 Derate Cause:PT1000",
-        "Descrição": null
+        "CÓDIGO": "IE0061",
+        "Severidade": 10,
+        "NOME": "SECCAUX Fail",
+        "DESCRIÇÃO": "Comm failure with SECCAUX, if permanent is critical"
     },
     {
-        "Código": "IE0204",
-        "Nome": "C2 Derate Cause:Cable Temp",
-        "Descrição": null
+        "CÓDIGO": "IE0062",
+        "Severidade": 1,
+        "NOME": "SECCAUX Recover",
+        "DESCRIÇÃO": "Comm recover with SECCAUX"
     },
     {
-        "Código": "IE0205",
-        "Nome": "C2 IMD Failure",
-        "Descrição": null
+        "CÓDIGO": "IE0063",
+        "Severidade": 10,
+        "NOME": "MQTTSBC Fail",
+        "DESCRIÇÃO": "Comm failure with MQTT SBC, if permanent is critical"
     },
     {
-        "Código": "IE0206",
-        "Nome": "C2 DC Sensor Failure",
-        "Descrição": null
+        "CÓDIGO": "IE0064",
+        "Severidade": 1,
+        "NOME": "MQTTSBC Recover",
+        "DESCRIÇÃO": "Comm recover with MQTT SBC"
     },
     {
-        "Código": "IE0207",
-        "Nome": "C2 PE failure",
-        "Descrição": null
+        "CÓDIGO": "IE0065",
+        "Severidade": 10,
+        "NOME": "Container RST",
+        "DESCRIÇÃO": "Container RST"
     },
     {
-        "Código": "IE0208",
-        "Nome": "C2 PE inop",
-        "Descrição": null
+        "CÓDIGO": "IE0071",
+        "Severidade": 10,
+        "NOME": "Matrix K1 invalid",
+        "DESCRIÇÃO": "Need to be checked on site, possible contactor failture"
     },
     {
-        "Código": null,
-        "Nome": null,
-        "Descrição": null
+        "CÓDIGO": "IE0072",
+        "Severidade": 10,
+        "NOME": "Matrix K2 invalid",
+        "DESCRIÇÃO": "Need to be checked on site, possible contactor failture"
     },
     {
-        "Código": "IE10001",
-        "Nome": "PU Overheat alarm",
-        "Descrição": null
+        "CÓDIGO": "IE0073",
+        "Severidade": 10,
+        "NOME": "Matrix K3 invalid",
+        "DESCRIÇÃO": "Need to be checked on site, possible contactor failture"
     },
     {
-        "Código": "IE10002",
-        "Nome": "PU AC Input Overvoltage",
-        "Descrição": null
+        "CÓDIGO": "IE0074",
+        "Severidade": 10,
+        "NOME": "Matrix K4 invalid",
+        "DESCRIÇÃO": "Need to be checked on site, possible contactor failture"
     },
     {
-        "Código": "IE10003",
-        "Nome": "PU AC Input undervotlage",
-        "Descrição": null
+        "CÓDIGO": "IE0075",
+        "Severidade": 10,
+        "NOME": "Matrix K5 invalid",
+        "DESCRIÇÃO": "Need to be checked on site, possible contactor failture"
     },
     {
-        "Código": "IE10004",
-        "Nome": "PU AC Meter Comm Failure",
-        "Descrição": null
+        "CÓDIGO": "IE0083",
+        "Severidade": 10,
+        "NOME": "Lms Server Failed",
+        "DESCRIÇÃO": "LMS Server is failed , if persist please evalute the EVSE "
     },
     {
-        "Código": "IE10005",
-        "Nome": "PU System Temp Failure",
-        "Descrição": null
+        "CÓDIGO": "IE0085",
+        "Severidade": 10,
+        "NOME": "Lms EVSE Failed",
+        "DESCRIÇÃO": "LMS EVSE is failed , if persist please evalute the EVSE "
     },
     {
-        "Código": "IE10006",
-        "Nome": "PU Charging Module Comm Failure",
-        "Descrição": null
+        "CÓDIGO": "IE0100",
+        "Severidade": 10,
+        "NOME": "Power Unit unavailable",
+        "DESCRIÇÃO": ""
     },
     {
-        "Código": "IE10007",
-        "Nome": "PU Open door",
-        "Descrição": null
+        "CÓDIGO": "IE30001",
+        "Severidade": 5,
+        "NOME": "batery is possible full, do not start ",
+        "DESCRIÇÃO": "just to log"
     },
     {
-        "Código": "IE10008",
-        "Nome": "PU Output shortcircuit",
-        "Descrição": null
+        "CÓDIGO": " // C1",
+        "Severidade": "",
+        "NOME": "",
+        "DESCRIÇÃO": ""
     },
     {
-        "Código": "IE10009",
-        "Nome": "PU Paralel Contact Fail",
-        "Descrição": null
+        "CÓDIGO": "IE0101",
+        "Severidade": 5,
+        "NOME": "C1 Emergency Button",
+        "DESCRIÇÃO": "EPO on Conector C1 is pressed.Just for log."
     },
     {
-        "Código": "IE10010",
-        "Nome": "PU Emergency stop",
-        "Descrição": null
+        "CÓDIGO": "IE0102",
+        "Severidade": 10,
+        "NOME": "C1 Meter Failure",
+        "DESCRIÇÃO": "Please check meter comunication, If persist its need to be checked on site"
     },
     {
-        "Código": "IE10011",
-        "Nome": "PU SPD Alarm",
-        "Descrição": null
+        "CÓDIGO": "IE0105",
+        "Severidade": 10,
+        "NOME": "C1 IMD Failure",
+        "DESCRIÇÃO": "Comm failure, or is moment or permanent"
     },
     {
-        "Código": "IE10012",
-        "Nome": "PU Dust Filter accumulation Alarm",
-        "Descrição": null
+        "CÓDIGO": "IE0106",
+        "Severidade": 10,
+        "NOME": "C1 DC Sensor Failure",
+        "DESCRIÇÃO": "Comm failure, or is moment or permanent "
     },
     {
-        "Código": "IE10013",
-        "Nome": "PU OTA Updating",
-        "Descrição": null
+        "CÓDIGO": "IE0107",
+        "Severidade": 10,
+        "NOME": "C1 PE failure",
+        "DESCRIÇÃO": "Possible controller problem"
     },
     {
-        "Código": "IE10014",
-        "Nome": "PU Aux Board Fail",
-        "Descrição": null
+        "CÓDIGO": "IE0108",
+        "Severidade": 10,
+        "NOME": "C1 PE inop",
+        "DESCRIÇÃO": ""
     },
     {
-        "Código": "IE10020",
-        "Nome": "PU no comm",
-        "Descrição": null
+        "CÓDIGO": "IE0109 ",
+        "Severidade": 10,
+        "NOME": "C1 Cooler inop",
+        "DESCRIÇÃO": "C1 cable cooler Failure"
     },
     {
-        "Código": "IE10021",
-        "Nome": "PU comm ok",
-        "Descrição": null
+        "CÓDIGO": "IE0110",
+        "Severidade": 10,
+        "NOME": "C1 PU inop",
+        "DESCRIÇÃO": "Comm failure, or is moment or permanent"
     },
     {
-        "Código": "IE10030",
-        "Nome": "PU not charging",
-        "Descrição": null
+        "CÓDIGO": "IE0111",
+        "Severidade": 10,
+        "NOME": "C1 PWM inop",
+        "DESCRIÇÃO": "Comm failure, or is moment or permanent "
     },
     {
-        "Código": "IE10031",
-        "Nome": "PU charging",
-        "Descrição": null
+        "CÓDIGO": "IE0112",
+        "Severidade": 10,
+        "NOME": "C1 tilt inop",
+        "DESCRIÇÃO": "Comm failure, or is moment or permanent "
     },
     {
-        "Código": "IE10032",
-        "Nome": "PU Reduce Pwr: AC low voltage",
-        "Descrição": null
+        "CÓDIGO": "IE0113",
+        "Severidade": 10,
+        "NOME": "C1 Possible Cable Theft",
+        "DESCRIÇÃO": "Please check cable PT1000 or cable is not there"
     },
     {
-        "Código": "IE10033",
-        "Nome": "PU Reduce Pwr: Overheating >55C",
-        "Descrição": null
+        "CÓDIGO": "IE0114",
+        "Severidade": 5,
+        "NOME": "C1 Derate Cause:Internal Temp",
+        "DESCRIÇÃO": "Check filters"
     },
     {
-        "Código": "IE10034",
-        "Nome": "PU Reduce Pwr: low noise level",
-        "Descrição": null
+        "CÓDIGO": "IE0115",
+        "Severidade": 5,
+        "NOME": "C1 Derate Cause:cable Temp",
+        "DESCRIÇÃO": "C1 derate cause temperature on cable was increasing,Inspect cable"
     },
     {
-        "Código": "IE10035",
-        "Nome": "fail due parallel contactors",
-        "Descrição": null
+        "CÓDIGO": "IE0116",
+        "Severidade": 5,
+        "NOME": "C1 IMD Prealarm",
+        "DESCRIÇÃO": "Possible car with problems"
     },
     {
-        "Código": "IE10050",
-        "Nome": "Module Alarm: Grid power fail",
-        "Descrição": null
+        "CÓDIGO": "IE0117",
+        "Severidade": 10,
+        "NOME": "C1 IMD alarm",
+        "DESCRIÇÃO": "Possible car with problems"
     },
     {
-        "Código": "IE10051",
-        "Nome": "Module Alarm: Bus bar fail",
-        "Descrição": null
+        "CÓDIGO": "",
+        "Severidade": "",
+        "NOME": "",
+        "DESCRIÇÃO": ""
     },
     {
-        "Código": "IE10052",
-        "Nome": "Module Alarm: Overhear",
-        "Descrição": null
+        "CÓDIGO": "// C2",
+        "Severidade": "",
+        "NOME": "",
+        "DESCRIÇÃO": ""
     },
     {
-        "Código": "IE10053",
-        "Nome": "Module Alarm: FAN fault",
-        "Descrição": null
+        "CÓDIGO": "IE0201",
+        "Severidade": 5,
+        "NOME": "C2 Emergency Button",
+        "DESCRIÇÃO": "EPO on Conector C2 is pressed.Just for log"
     },
     {
-        "Código": "IE10054",
-        "Nome": "Module Alarm: Aux Source Fault",
-        "Descrição": null
+        "CÓDIGO": "IE0202",
+        "Severidade": 10,
+        "NOME": "C2 Meter Failure;Pls check meter comunication, if persist goto EVSE",
+        "DESCRIÇÃO": "Please check meter comunication, If persist its need to be checked on site"
     },
     {
-        "Código": "IE10055",
-        "Nome": "Module Alarm: SCI Fault",
-        "Descrição": null
+        "CÓDIGO": "IE0203",
+        "Severidade": 8,
+        "NOME": "C2 Derate Cause:PT1000",
+        "DESCRIÇÃO": "C2 derate cause PT1000 dif temperature was big, check cable"
     },
     {
-        "Código": "IE10056",
-        "Nome": "Module Alarm: Output over voltage",
-        "Descrição": null
+        "CÓDIGO": "IE0204",
+        "Severidade": 8,
+        "NOME": "C2 Derate Cause:Cable Temp",
+        "DESCRIÇÃO": "C2 derate cause temperature on cable was increasing, check cable"
     },
     {
-        "Código": "IE10057",
-        "Nome": "Module Alarm: short circuit",
-        "Descrição": null
+        "CÓDIGO": "IE0205",
+        "Severidade": 10,
+        "NOME": "C2 IMD Failure",
+        "DESCRIÇÃO": "Comm failure, or is moment or permanent "
     },
     {
-        "Código": "IE10058",
-        "Nome": "Module Alarm: Output overcurrent",
-        "Descrição": null
+        "CÓDIGO": "IE0206",
+        "Severidade": 10,
+        "NOME": "C2 DC Sensor Failure",
+        "DESCRIÇÃO": "Comm failure, or is moment or permanent "
     },
     {
-        "Código": "IE10059",
-        "Nome": "Module Alarm: PFC fault",
-        "Descrição": null
+        "CÓDIGO": "IE0207",
+        "Severidade": 10,
+        "NOME": "C2 PE failure",
+        "DESCRIÇÃO": "Possible controller problem"
     },
     {
-        "Código": "IE10060",
-        "Nome": "Module Alarm: DCDC fault",
-        "Descrição": null
+        "CÓDIGO": "IE0208",
+        "Severidade": 10,
+        "NOME": "C2 PE inop",
+        "DESCRIÇÃO": ""
     },
     {
-        "Código": "IE10061",
-        "Nome": "Module Alarm: power limit",
-        "Descrição": null
+        "CÓDIGO": "IE0209",
+        "Severidade": 10,
+        "NOME": "C2 Cooler inop",
+        "DESCRIÇÃO": "C2 cable cooler Failure "
     },
     {
-        "Código": "IE10062",
-        "Nome": "Module Alarm: current equalization",
-        "Descrição": null
+        "CÓDIGO": "IE0210",
+        "Severidade": 10,
+        "NOME": "C2 PU inop",
+        "DESCRIÇÃO": "Comm failure, or is moment or permanent "
     },
     {
-        "Código": "IE10063",
-        "Nome": "Module Alarm: CAN address conflict",
-        "Descrição": null
+        "CÓDIGO": "IE0211",
+        "Severidade": 10,
+        "NOME": "C2 PWM inop",
+        "DESCRIÇÃO": "Comm failure, or is moment or permanent "
     },
     {
-        "Código": "IE10064",
-        "Nome": "Module Alarm: Incumbent fault",
-        "Descrição": null
+        "CÓDIGO": "IE0212",
+        "Severidade": 10,
+        "NOME": "C2 tilt inop",
+        "DESCRIÇÃO": "Comm failure, or is moment or permanent "
     },
     {
-        "Código": "IE10065",
-        "Nome": "Module Alarm: Discharge Alarm",
-        "Descrição": null
+        "CÓDIGO": "IE0213",
+        "Severidade": 10,
+        "NOME": "C2 Possible Cable Theft",
+        "DESCRIÇÃO": "C2 derate cause temperature on cable was increasing,Inspect cable"
     },
     {
-        "Código": "IE10070",
-        "Nome": "Module Alarm: Comm Fail",
-        "Descrição": null
+        "CÓDIGO": "IE0214",
+        "Severidade": 5,
+        "NOME": "C2 Derate Cause:Internal Temp",
+        "DESCRIÇÃO": "Check filters"
     },
     {
-        "Código": "IE10071",
-        "Nome": "Module Alarm: Comm Normal",
-        "Descrição": null
+        "CÓDIGO": "IE0215",
+        "Severidade": 5,
+        "NOME": "C2 Derate Cause:cable Temp",
+        "DESCRIÇÃO": "C2 derate cause temperature on cable was increasing,Inspect cable"
     },
     {
-        "Código": "IE99999",
-        "Nome": "LAST (\"IE99999\", \"IE99999\")",
-        "Descrição": null
+        "CÓDIGO": "IE0216",
+        "Severidade": 5,
+        "NOME": "C2 IMD Prealarm",
+        "DESCRIÇÃO": "Possible car with problems"
+    },
+    {
+        "CÓDIGO": "IE0217",
+        "Severidade": 10,
+        "NOME": "C2 IMD alarm",
+        "DESCRIÇÃO": "Possible car with problems"
+    },
+    {
+        "CÓDIGO": "",
+        "Severidade": "",
+        "NOME": "",
+        "DESCRIÇÃO": ""
+    },
+    {
+        "CÓDIGO": "// pu alarms  vsecc/pu/alarm",
+        "Severidade": "",
+        "NOME": "",
+        "DESCRIÇÃO": ""
+    },
+    {
+        "CÓDIGO": "IE10001",
+        "Severidade": "",
+        "NOME": "PU Overheat alarm ",
+        "DESCRIÇÃO": ""
+    },
+    {
+        "CÓDIGO": "IE10002",
+        "Severidade": "",
+        "NOME": "PU AC Input Overvoltage",
+        "DESCRIÇÃO": ""
+    },
+    {
+        "CÓDIGO": "IE10003",
+        "Severidade": "",
+        "NOME": "PU AC Input undervotlage",
+        "DESCRIÇÃO": ""
+    },
+    {
+        "CÓDIGO": "IE10004",
+        "Severidade": "",
+        "NOME": "PU AC Meter Comm Failure",
+        "DESCRIÇÃO": ""
+    },
+    {
+        "CÓDIGO": "IE10005",
+        "Severidade": "",
+        "NOME": "PU System Temp Failure",
+        "DESCRIÇÃO": ""
+    },
+    {
+        "CÓDIGO": "IE10006",
+        "Severidade": "",
+        "NOME": "PU Charging Module Comm Failure",
+        "DESCRIÇÃO": ""
+    },
+    {
+        "CÓDIGO": "IE10007",
+        "Severidade": 0,
+        "NOME": "PU Open door",
+        "DESCRIÇÃO": ""
+    },
+    {
+        "CÓDIGO": "IE10008",
+        "Severidade": 10,
+        "NOME": "PU Output shortcircuit",
+        "DESCRIÇÃO": ""
+    },
+    {
+        "CÓDIGO": "IE10009",
+        "Severidade": "",
+        "NOME": "PU Paralel Contact Fail",
+        "DESCRIÇÃO": ""
+    },
+    {
+        "CÓDIGO": "IE10010",
+        "Severidade": 8,
+        "NOME": "PU Emergency stop ",
+        "DESCRIÇÃO": ""
+    },
+    {
+        "CÓDIGO": "IE10011",
+        "Severidade": 10,
+        "NOME": "PU SPD Alarm",
+        "DESCRIÇÃO": ""
+    },
+    {
+        "CÓDIGO": "IE10012",
+        "Severidade": 10,
+        "NOME": "PU Dust Filter acumulation Alarm",
+        "DESCRIÇÃO": ""
+    },
+    {
+        "CÓDIGO": "IE10013",
+        "Severidade": 1,
+        "NOME": "PU OTA Updating",
+        "DESCRIÇÃO": ""
+    },
+    {
+        "CÓDIGO": "IE10014",
+        "Severidade": 10,
+        "NOME": "PU Aux Board Fail",
+        "DESCRIÇÃO": ""
+    },
+    {
+        "CÓDIGO": "IE10020",
+        "Severidade": 10,
+        "NOME": "PU no comm",
+        "DESCRIÇÃO": ""
+    },
+    {
+        "CÓDIGO": "IE10021",
+        "Severidade": 1,
+        "NOME": "PU comm ok ",
+        "DESCRIÇÃO": ""
+    },
+    {
+        "CÓDIGO": "",
+        "Severidade": "",
+        "NOME": "",
+        "DESCRIÇÃO": ""
+    },
+    {
+        "CÓDIGO": "// CHARGING OR NOT",
+        "Severidade": "",
+        "NOME": "",
+        "DESCRIÇÃO": ""
+    },
+    {
+        "CÓDIGO": "IE10030",
+        "Severidade": 1,
+        "NOME": "PU not charging",
+        "DESCRIÇÃO": ""
+    },
+    {
+        "CÓDIGO": "IE10031",
+        "Severidade": 1,
+        "NOME": "PU charging",
+        "DESCRIÇÃO": ""
+    },
+    {
+        "CÓDIGO": "",
+        "Severidade": "",
+        "NOME": "",
+        "DESCRIÇÃO": ""
+    },
+    {
+        "CÓDIGO": " // power reductyion power  vsecc/pu/reasonReducePwr",
+        "Severidade": "",
+        "NOME": "",
+        "DESCRIÇÃO": ""
+    },
+    {
+        "CÓDIGO": "IE10032",
+        "Severidade": 5,
+        "NOME": "PU Reduce Pwr: AC low voltage",
+        "DESCRIÇÃO": ""
+    },
+    {
+        "CÓDIGO": "IE10033",
+        "Severidade": 8,
+        "NOME": "PU Reduce Pwr: Overheating >55C",
+        "DESCRIÇÃO": ""
+    },
+    {
+        "CÓDIGO": "IE10034",
+        "Severidade": 1,
+        "NOME": "PU Reduce Pwr: low noise level",
+        "DESCRIÇÃO": ""
+    },
+    {
+        "CÓDIGO": "",
+        "Severidade": "",
+        "NOME": "",
+        "DESCRIÇÃO": ""
+    },
+    {
+        "CÓDIGO": " // dc bus fail  vsecc/pu/dcBusStatus ",
+        "Severidade": "",
+        "NOME": "",
+        "DESCRIÇÃO": ""
+    },
+    {
+        "CÓDIGO": "IE10035",
+        "Severidade": 10,
+        "NOME": "fail due paralel contactors",
+        "DESCRIÇÃO": ""
+    },
+    {
+        "CÓDIGO": "",
+        "Severidade": "",
+        "NOME": "",
+        "DESCRIÇÃO": ""
+    },
+    {
+        "CÓDIGO": "// modules",
+        "Severidade": "",
+        "NOME": "",
+        "DESCRIÇÃO": ""
+    },
+    {
+        "CÓDIGO": "IE10050",
+        "Severidade": "",
+        "NOME": "Module Alarm: Grid power fail",
+        "DESCRIÇÃO": ""
+    },
+    {
+        "CÓDIGO": "IE10051",
+        "Severidade": "",
+        "NOME": "Module Alarm: Bus bar fail",
+        "DESCRIÇÃO": ""
+    },
+    {
+        "CÓDIGO": "IE10052",
+        "Severidade": "",
+        "NOME": "Module Alarm: Overhear",
+        "DESCRIÇÃO": ""
+    },
+    {
+        "CÓDIGO": "IE10053",
+        "Severidade": "",
+        "NOME": "Module Alarm: FAN fault",
+        "DESCRIÇÃO": ""
+    },
+    {
+        "CÓDIGO": "IE10054",
+        "Severidade": "",
+        "NOME": "Module Alarm: Aux Source Fault",
+        "DESCRIÇÃO": ""
+    },
+    {
+        "CÓDIGO": "IE10055",
+        "Severidade": "",
+        "NOME": "Module Alarm: SCI Fault",
+        "DESCRIÇÃO": ""
+    },
+    {
+        "CÓDIGO": "IE10056",
+        "Severidade": "",
+        "NOME": "Module Alarm: Output over voltage",
+        "DESCRIÇÃO": ""
+    },
+    {
+        "CÓDIGO": "IE10057",
+        "Severidade": "",
+        "NOME": "Module Alarm: short circuit",
+        "DESCRIÇÃO": ""
+    },
+    {
+        "CÓDIGO": "IE10058",
+        "Severidade": "",
+        "NOME": "Module Alarm: Output overcurrent",
+        "DESCRIÇÃO": ""
+    },
+    {
+        "CÓDIGO": "IE10059",
+        "Severidade": "",
+        "NOME": "Module Alarm: PFC fault",
+        "DESCRIÇÃO": ""
+    },
+    {
+        "CÓDIGO": "IE10060",
+        "Severidade": "",
+        "NOME": "Module Alarm: DCDC fault",
+        "DESCRIÇÃO": ""
+    },
+    {
+        "CÓDIGO": "IE10061",
+        "Severidade": "",
+        "NOME": "Module Alarm: power limit ",
+        "DESCRIÇÃO": ""
+    },
+    {
+        "CÓDIGO": "IE10062",
+        "Severidade": "",
+        "NOME": "Module Alarm: current equalization",
+        "DESCRIÇÃO": ""
+    },
+    {
+        "CÓDIGO": "IE10063",
+        "Severidade": "",
+        "NOME": "Module Alarm: CAN address conflit",
+        "DESCRIÇÃO": ""
+    },
+    {
+        "CÓDIGO": "IE10064",
+        "Severidade": "",
+        "NOME": "Module Alarm: Incumbent fault",
+        "DESCRIÇÃO": ""
+    },
+    {
+        "CÓDIGO": "IE10065",
+        "Severidade": "",
+        "NOME": "Module Alarm: Discharge Alarm",
+        "DESCRIÇÃO": ""
+    },
+    {
+        "CÓDIGO": "IE10070",
+        "Severidade": "",
+        "NOME": "Module Alarm: Comm Fail",
+        "DESCRIÇÃO": ""
+    },
+    {
+        "CÓDIGO": "IE10071",
+        "Severidade": "",
+        "NOME": "Module Alarm: Comm Normal",
+        "DESCRIÇÃO": ""
+    },
+    {
+        "CÓDIGO": "IE99999",
+        "Severidade": "",
+        "NOME": "    LAST (\"IE99999\", \"IE99999 \")",
+        "DESCRIÇÃO": ""
     }
 ]

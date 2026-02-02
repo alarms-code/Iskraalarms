@@ -138,7 +138,7 @@ function searchAlarm() {
     // Exibir o resultado
     if (matches.length > 0) {
         nameCell.textContent = matches[0]["NOME"] || "Sem nome disponível";
-        descriptionCell.textContent = matches[0]["Descrição"] || "Sem descrição disponível";
+        descriptionCell.textContent = matches[0]["DESCRIÇÃO"] || "Sem descrição disponível";
     } else {
         nameCell.innerHTML = "<span style='color: red;'>Nenhum resultado encontrado.</span>";
         descriptionCell.innerHTML = "<span style='color: red;'>Nenhum resultado encontrado.</span>";
@@ -153,4 +153,5 @@ function clearResults() {
     </script>
     </body>
 </html>
+
 

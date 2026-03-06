@@ -95,6 +95,18 @@
         "NOME": "RFID Failure",
         "DESCRIÇÃO": "RFID module has comunication failed, if persists possible HW failure."
     },
+     {
+        "CÓDIGO": "IE0052",
+        "Severidade": 10,
+        "NOME": "RFID NO AUTH",
+        "DESCRIÇÃO": "A EVDriver tryed to authenticate but no auth from CPO."
+    },
+     {
+        "CÓDIGO": "IE0053",
+        "Severidade": 10,
+        "NOME": "RFID AUTH",
+        "DESCRIÇÃO": "A EVDriver tryed to authenticate and hadfrom CPO. Just for log"
+    },
     {
         "CÓDIGO": "IE0054",
         "Severidade": 10,
@@ -731,4 +743,5 @@
         "NOME": "    LAST (\"IE99999\", \"IE99999 \")",
         "DESCRIÇÃO": ""
     }
+
 ]
